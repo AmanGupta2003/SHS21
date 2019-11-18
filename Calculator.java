@@ -18,99 +18,72 @@ public class Calculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello, Welcome to Aman's Bang Bang Calculator\n");
+        // Welcome message below
+        System.out.println("Hello, Welcome to Aman's Bang Calculator\n");
 
         while (true) {
             Scanner keyboard = new Scanner(System.in);
-            System.out.println("Please type in calculation");
+            System.out.println("Explain an Expression por favor:");
             String line = keyboard.nextLine();
-            
-            // check condition
-            if (line.startsWith("s") || line.startsWith("v") || line.startsWith("t") || line.startsWith("s") || line.startsWith("~") || line.startsWith("c") || line.startsWith("|")) {
-                    Scanner moreScan = new Scanner(line);
-                        String specialOptr = moreScan.next();
-                        
-                        if(specialOptr.length() != 1){
-                            System.out.println("Error, Only Single letter Operator");
-                            continue; 
-                        }
 
-                        // hello aman again`
-                        Double y = moreScan.nextDouble();
-                        moreCalc(y, specialOptr.charAt(0));
+            // check condition
+            if (line.startsWith("s") || line.startsWith("v") || line.startsWith("t") || line.startsWith("s")
+                    || line.startsWith("~") || line.startsWith("c") || line.startsWith("|")) {
+                Scanner moreScan = new Scanner(line);
+                String specialOptr = moreScan.next();
+
+                if (specialOptr.length() != 1) {
+                    System.out.println("Error, Only Single letter Operator");
                     continue;
+                }
+
+                // hello aman again`
+                Double y = moreScan.nextDouble();
+                moreCalc(y, specialOptr.charAt(0));
+                continue;
             }
-            
+
             Scanner strCalculation = new Scanner(line);
-            
+
             if (!strCalculation.hasNextDouble()) {
-                String nxt = strCalculation.next(); 
-                if (nxt.equalsIgnoreCase ("quit"))
-                {
+                String nxt = strCalculation.next();
+                if (nxt.equalsIgnoreCase("quit")) {
                     break;
                 }
-                System.out.println ("Error: missing double");
+                System.out.println("Error: missing double");
                 continue;
             }
-            
+
             double num1 = strCalculation.nextDouble();
             if (!strCalculation.hasNext()) {
-                System.out.println ("Error: missing operator");
+                System.out.println("Error: missing operator");
                 continue;
             }
-            
+
             String optr = strCalculation.next();
             if (optr.length() != 1) {
-                System.out.println ("Error: invalid operator: " + optr);
+                System.out.println("Error: invalid operator: " + optr);
                 continue;
             }
-            
+
             char optrC = optr.charAt(0);
-            if (optrC != '+' &&  optrC != '-' && optrC != '*' && optrC != '%' && optrC != '/' && optrC != '^' && optrC != '^') {
+            if (optrC != '+' && optrC != '-' && optrC != '*' && optrC != '%' && optrC != '/' && optrC != '^'
+                    && optrC != '^') {
                 System.out.println("Error, Invalid OPerator: " + optrC);
                 continue;
             }
-            
+
             if (!strCalculation.hasNextDouble()) {
                 System.out.println("Error, Invalid 2nd variable");
                 continue;
             }
-            
+
             double num2 = strCalculation.nextDouble();
             Calc(num1, optrC, num2);
-   
-
-//            String extraCalc = strCalculation.next();
-//            if (extraCalc.length() == 1){
-//            if(extraCalc.charAt(0) != 'v' && extraCalc.charAt(0) != 'c' && extraCalc.charAt(0) != 't' && extraCalc.charAt(0) != 's' && extraCalc.charAt(0) != '|' && extraCalc.charAt(0) != '~' ){
-//                System.out.println("Error, Invalid Operator: " + extraCalc);
-//                continue;
-//            }
-//            if (strCalculation.hasNextDouble()) {
-//                double num3 = strCalculation.nextDouble();
-//                moreCalc(num3, extraCalc.charAt(0));
-//            }                  
-//            if (strCalculation.hasNext()) {
-//                    String extra = strCalculation.next();
-//                    if (extra.equalsIgnoreCase("quit")) {
-//                        break;
-//                    } else if (extra.length() == 1) {
-//                        if (extra.charAt(0) == 'v' || extra.charAt(0) == 'c' || extra.charAt(0) == 't' || extra.charAt(0) == 's' || extra.charAt(0) == '|' || extra.charAt(0) == '~') {
-//                            if (strCalculation.hasNextDouble()) {
-//                                double num3 = strCalculation.nextDouble();
-//                                moreCalc(num3, extra.charAt(0));
-//                            }
-//                        }
-//                    } else {
-//                        System.out.println("Error");
-//                    }
-//                } else {
-//                    System.out.println("Error");
-//                }
-            }
-            System.out.println("Thanks for coming");
         }
+        System.out.println("Thanks for coming");
+    }
+    
 
     public static void Calc(double var1, double optr, double var2) {
 
