@@ -35,6 +35,8 @@ public class Calculator {
                             System.out.println("Error, Only Single letter Operator");
                             continue; 
                         }
+                        
+                        // hello aman
                         Double y = moreScan.nextDouble();
                         moreCalc(y, specialOptr.charAt(0));
                     continue;
