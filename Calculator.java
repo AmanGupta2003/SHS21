@@ -6,6 +6,9 @@
 package calculator_project;
 
 import java.util.*;
+
+import javax.sound.sampled.SourceDataLine;
+
 import java.awt.*;
 
 /**
@@ -27,6 +30,12 @@ public class Calculator {
             String line = keyboard.nextLine();
 
             // check condition
+            int length = line.length();
+            if (length == 0) {
+                System.out.println("Error");
+                continue;
+            }
+
             if (line.startsWith("s") || line.startsWith("v") || line.startsWith("t") || line.startsWith("s")
                     || line.startsWith("~") || line.startsWith("c") || line.startsWith("|")) {
                 Scanner moreScan = new Scanner(line);
@@ -36,8 +45,11 @@ public class Calculator {
                     System.out.println("Error, Only Single letter Operator");
                     continue;
                 }
+                if (line.length() == 1) {
+                    System.out.println("Error");
+                    continue;
+                }
 
-                // hello aman again`
                 Double y = moreScan.nextDouble();
                 moreCalc(y, specialOptr.charAt(0));
                 continue;
@@ -83,7 +95,6 @@ public class Calculator {
         }
         System.out.println("Thanks for coming");
     }
-    
 
     public static void Calc(double var1, double optr, double var2) {
 
@@ -98,6 +109,8 @@ public class Calculator {
             System.out.println(modulo);
         } else if (optr == '+') {
             System.out.println(sum);
+        } else if (optr == '/') {
+            System.out.println(quotient);
         } else if (optr == '*') {
             System.out.println(product);
         } else if (optr == '^') {
