@@ -29,6 +29,7 @@ public class Calculator {
             if (line.startsWith("s") || line.startsWith("v") || line.startsWith("t") || line.startsWith("s") || line.startsWith("~") || line.startsWith("c") || line.startsWith("|")) {
                     Scanner moreScan = new Scanner(line);
                         String specialOptr = moreScan.next();
+                        
                         if(specialOptr.length() != 1){
                             System.out.println("Error, Only Single letter Operator");
                             continue; 
