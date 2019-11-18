@@ -32,8 +32,8 @@ public class Calculator {
 
         while (true) {
             Scanner scanInput = new Scanner(System.in); // makes a scanner
-            System.out.println("Please enter an expression kind sir/ ma'dam:"); // generic statement asking user for an
-                                                                                // expression
+            System.out.print("Please enter an expression kind sir/ ma'dam:"); // generic statement asking user for an
+                                                                              // expression
             String input = scanInput.nextLine(); // Makes the user input an expression and then stores it in a variable
             if (input.equalsIgnoreCase("quit")) // if statement checks whether if the expression by user is "quit" in
                                                 // any capitalization, it will break the while loop and print ending
@@ -41,7 +41,8 @@ public class Calculator {
                 break;
             String output = Calculate(input); // here, the user input is being sent to a method called "Calculate()" and
                                               // after that method runs, the output would be stored in output variable
-            System.out.println(output); // here in the end, after the calculations happen, the final answer is printed
+            System.out.println(input + " = " + output); // here in the end, after the calculations happen, the final
+                                                        // answer is printed
         }
     }
 
