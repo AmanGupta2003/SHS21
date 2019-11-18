@@ -23,7 +23,7 @@ public class Calculator {
 
         while (true) {
             Scanner keyboard = new Scanner(System.in);
-            System.out.println("Explain an Expression por favor:");
+            System.out.println("Give an Expression:");
             String line = keyboard.nextLine();
 
             // check condition
