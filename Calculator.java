@@ -22,29 +22,29 @@ public class Calculator {
      */
     public static void main(String[] args) {
         // Welcome message below
-        System.out.println("Hello, Welcome to Aman's Bang Calculator\n");
-
+        System.out.println("Hello, Welcome to Aman's Bang Calculator\n"); // welcome message
         startCalc();
-        System.out.println("Thanks for coming");
+        System.out.println("Thanks for coming fam"); // closing message
     }
 
-    public static void startCalc() {
-        // ask for input
+    public static void startCalc() { // This is the entire structure of my calculator
+        // first ask for input
 
         while (true) {
-            Scanner scanInput = new Scanner(System.in);
-            System.out.println("Please enter an expression kind sir/ ma'dam:");
-            String input = scanInput.nextLine(); // Scan input
-            if (input.equalsIgnoreCase("quit"))
+            Scanner scanInput = new Scanner(System.in); // makes a scanner
+            System.out.println("Please enter an expression kind sir/ ma'dam:"); // generic statement asking user for an
+                                                                                // expression
+            String input = scanInput.nextLine(); // Makes the user input an expression and then stores it in a variable
+            if (input.equalsIgnoreCase("quit")) // if statement checks whether if the expression by user is "quit" in
+                                                // any capitalization, it will break the while loop and print ending
+                                                // message
                 break;
-            String output = Calculate(input);
-            System.out.println(output);
+            String output = Calculate(input); // here, the user input is being sent to a method called "Calculate()" and
+                                              // after that method runs, the output would be stored in output variable
+            System.out.println(output); // here in the end, after the calculations happen, the final answer is printed
         }
-        // call calculate
-        // print output
     }
 
-    
     public static String Calculate(String input) {
         if (input.length() == 0) {
             return "Error, Input missing";
@@ -81,7 +81,7 @@ public class Calculator {
 
         Double y = moreScan.nextDouble();
         return moreCalc(y, specialOptr.charAt(0));
-        
+
     }
 
     public static String CalculateSimple(String input) {
@@ -110,7 +110,7 @@ public class Calculator {
         return Calc(num1, optrC, num2);
     }
 
-    public static String Calc(double var1, double optr, double var2) {    
+    public static String Calc(double var1, double optr, double var2) {
         if (optr == '%') {
             return "" + (var1 % var2);
         } else if (optr == '+') {
@@ -138,7 +138,7 @@ public class Calculator {
         } else if (optr == 's') {
             return "" + Math.sin(var3);
         } else if (optr == '|') {
-           return "" + Math.abs(var3);
+            return "" + Math.abs(var3);
         } else if (optr == '~') {
             return "" + Math.round(var3);
         } else {
