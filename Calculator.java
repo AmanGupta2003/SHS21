@@ -26,6 +26,7 @@ public class Calculator {
             System.out.println("Please type in calculation");
             String line = keyboard.nextLine();
             
+            // check condition
             if (line.startsWith("s") || line.startsWith("v") || line.startsWith("t") || line.startsWith("s") || line.startsWith("~") || line.startsWith("c") || line.startsWith("|")) {
                     Scanner moreScan = new Scanner(line);
                         String specialOptr = moreScan.next();
