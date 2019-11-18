@@ -33,6 +33,7 @@ public class Calculator {
 
         while (true) {
             Scanner scanInput = new Scanner(System.in);
+            System.out.println("Please enter an expression kind sir/ ma'dam:");
             String input = scanInput.nextLine(); // Scan input
             if (input.equalsIgnoreCase("quit"))
                 break;
@@ -79,8 +80,8 @@ public class Calculator {
         }
 
         Double y = moreScan.nextDouble();
-        Double result = moreCalc(y, specialOptr.charAt(0));
-        return "" + result;
+        return moreCalc(y, specialOptr.charAt(0));
+        
     }
 
     public static String CalculateSimple(String input) {
