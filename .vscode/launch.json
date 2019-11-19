@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Arrays_practice",
+            "request": "launch",
+            "mainClass": "arrays.Arrays_practice"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Calculator",
             "request": "launch",
             "mainClass": "calculator_project.Calculator"
