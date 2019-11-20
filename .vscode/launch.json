@@ -1,11 +1,23 @@
 {
     "configurations": [
-    {
-        "type": "java",
-        "name": "Debug (Launch)",
-        "request": "launch",
-        "mainClass": ""
-    },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test3",
+            "request": "launch",
+            "mainClass": "test3.Test3"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestAmit",
+            "request": "launch",
+            "mainClass": "TestAmit"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": ""
+        },
         {
             "type": "java",
             "name": "CodeLens (Launch) - Sample",
