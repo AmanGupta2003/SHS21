@@ -28,16 +28,16 @@ public class Arrays_practice {
     //     Dailytemp[dayNum - 1] = tempp;
     // }
 
-    // public static int printAverage(int[] Dailytemp) {
+    public static int printAverage(int[] Dailytemp) {
 
-    //     int avg = 0;
-    //     for (int x = 0; x < Dailytemp.length; x++) {
-    //         avg = avg + Dailytemp[x];
-    //     }
-    //     avg = avg / Dailytemp.length;
-    //     System.out.println("Average temp = " + avg);
-    //     return avg;
-    // }
+        int avg = 0;
+        for (int x = 0; x < Dailytemp.length; x++) {
+            avg = avg + Dailytemp[x];
+        }
+        avg = avg / Dailytemp.length;
+        System.out.println("Average temp = " + avg);
+        return avg;
+    }
 
     // public static void printHigher(int[] Dailytemp, int avg) {
     //     int AboveAvgCount = 0;
@@ -104,31 +104,95 @@ public class Arrays_practice {
     //     }
     //     System.out.println("]");
     // }
-    public static void rotation(int[] Dailytemp){
-        //System.out.println("Rotated Arrays: ");
-        // int original1 = Dailytemp[0];
-        // for(int i = 0; i < Dailytemp.length; i++){
-        //     if(i == 6){
-        //         Dailytemp[i] = original1;
-        //         System.out.print(Dailytemp[i]);
-        //         continue;
-        //     }
-        //     Dailytemp[i] = Dailytemp[i+1];
-        //     System.out.print(Dailytemp[i] + ",");
-        // }
-        // int lastnumber = Dailytemp[6];
-        // for(int x = Dailytemp.length-1; x >= 0; x-- ){
-        //     if(x == 0){
-        //         Dailytemp[0] = lastnumber;
+    // public static void rotation(int[] Dailytemp){
+    //     System.out.println("Rotated Arrays: ");
+    //     int original1 = Dailytemp[0];
+    //     for(int i = 0; i < Dailytemp.length; i++){
+    //         if(i == 6){
+    //             Dailytemp[i] = original1;
+    //             System.out.print(Dailytemp[i]);
+    //             continue;
+    //         }
+    //         Dailytemp[i] = Dailytemp[i+1];
+    //         System.out.print(Dailytemp[i] + ",");
+    //     }
+    //     int lastnumber = Dailytemp[6];
+    //     for(int x = Dailytemp.length-1; x >= 0; x-- ){
+    //         if(x == 0){
+    //             Dailytemp[0] = lastnumber;
                 
-        //     }else {
-        //     Dailytemp[x] = Dailytemp[x - 1];
-        //     }
+    //         }else {
+    //         Dailytemp[x] = Dailytemp[x - 1];
+    //         }
             
-        // }
-        // System.out.println("Rotation: ");
-        // for(int y = 0; y < Dailytemp.length; y++){
-        //     System.out.print(Dailytemp[y] + " ");
-        // }
+    //     }
+    //     System.out.println("Rotation: ");
+    //     for(int y = 0; y < Dailytemp.length; y++){
+    //         System.out.print(Dailytemp[y] + " ");
+    //     }
+    // }
+
+//quesion #14
+    public static boolean contans(int [] x, int[] y){
+        boolean a = false; 
+
+        for(int i = 1; i < y.length; i++){
+
+            a = true;
+
+            for(int b = 1; b < y.length; b++){
+                
+                if (x[i + b] != y[b]){
+                    a = false;
+                    return false;
+                }
+            }
+            if (a){
+                System.out.println(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+// question #19
+
+    public static int[] aaaa(int [] [] a, int [] [] ab){
+        for(int x = 1; x < a.length; x++){
+            
+            a[x][x] = ab.length; 
+
+        }
+        return a[][]; 
+    }
+
+// question #20
+    public static boolean magic(int[][] arrays){
+        
+        if(arrays.length == 0){
+            return true;
+        }
+
+        int s = 0; 
+        int lgth = arrays[0].length; 
+
+
+        for(int x = 0; x < arrays[0].length; x++){
+            s += arrays[0][x];
+            
+            for(int a = 1; a < arrays.length; a++){
+                if(arrays[a].length != lgth){
+                    return false;
+                }
+            int rs = 0;
+
+            }
+            int d = 0; 
+
+            if (d != arrays.length){
+                return false; 
+            }
+        }
+        return d; 
     }
 }
